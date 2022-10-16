@@ -28,9 +28,15 @@ Note:- Replace Asia/Colombo  with your Time Zone
 
 Make changes as follows)
 
-(Configuring Mysql )
+( Changing Time Zone )
 
-<code>updatemysql.sh</code>
+<code>dpkg-reconfigure tzdata</code>
+
+Then select your timezone
+
+<code>sed -i "963i date.timezone = Asia/Colombo" /etc/php/7.4/apache2/php.ini</code>
+
+Note:- Replace " Asia/Colombo " with your area code
 
 <code>exit</code>
 
